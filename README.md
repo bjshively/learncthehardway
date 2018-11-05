@@ -78,7 +78,7 @@ Common ways to break this program: Fail to set value of variable or fail to spec
 
 `gdb --batch --ex r --ex bt --ex q --args`: Runs the program so that if it bombs you get a backtrace
 
-*Sample usage of gdb:*
+**Sample usage of gdb:**
 
 `gdb ex4`: run ex4 under gdb
 
