@@ -149,3 +149,13 @@ if(blah) {
 	as a last resort, do this thing;
 }
 ```
+
+## Exercise 09: While Loops
+
+```
+int i = 0;
+while (i < 10) {
+	// do a thing and increment
+	i++;
+}
+```
