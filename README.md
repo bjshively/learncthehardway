@@ -131,3 +131,21 @@ printf("Who knows what this will print: %s.\n", first_name);
 ```
 
 You can make `long`s 2x larger by making them `unsigned`. `long`s go from -N to +N. `unsigned long`s go from 0 to 2N.
+
+## Exercise 08: If, Else-If, Else
+
+No boolean type. `0` is false, everything else is true
+
+`argc > 1` evaluates to 1 or 0, not true or false
+
+`argv[0]` is the name of the program itself
+
+```
+if(blah) {
+	do a thing;
+} else if (blahblah) {
+	do something else;
+} else {
+	as a last resort, do this thing;
+}
+```
