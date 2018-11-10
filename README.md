@@ -93,3 +93,41 @@ Common ways to break this program: Fail to set value of variable or fail to spec
 `bt`: print a backtrace of current calling stack
 
 `attach 123`: attach to process with pid 123 for debugging
+
+## Exercise 05: Memorizing C Operators
+
+Once you already know a language or two, memorization is an efficient way to pick up a new language, as opposed to learning through osmosis / typing in random code you aren't familiar with.
+
+## Exercise 06: Memorizing C Syntax
+
+*keywords* - augment the symbols of a language so it reads well
+
+*lexical analysis* - processing the symbols and keywords of a language. A single symbol/word is a *lexeme*
+
+## Exercise 07: Variables & Types
+
+Strings are declared as character arrays: `char first_name[] = "Brad"`
+
+`%ld` to print "long decimal" values (won't necessarily have a decimal point, called this for historical reasons)
+
+`%e` to print with scientific notation for very small (or large) values
+
+`\0` is just zero, and represents the `null byte` character, used to terminate strings stored as arrays
+
+`char`s are just integers to C, and it will allow you to do math on them (for better or worse..)
+
+You can read past the end of a string by overwriting the null byte terminator. ex:
+```
+char initial = 'J';
+char first_name[] = "Brad";
+char last_name[] = "Shively";
+first_name[4] = 'Q';
+/* 
+At this point what you get from printing first_name
+is totally random and depends on what's stored next in RAM
+*/
+printf("Who knows what this will print: %s.\n", first_name);
+
+```
+
+You can make `long`s 2x larger by making them `unsigned`. `long`s go from -N to +N. `unsigned long`s go from 0 to 2N.
