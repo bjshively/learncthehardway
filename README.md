@@ -159,3 +159,14 @@ while (i < 10) {
 	i++;
 }
 ```
+
+## Exercise 10: Switch Statement
+
+A switch statement in C is really a _jump table_. Can only use integers, not expressions (i.e `case x > 5` is invalid)
+
+Because switch only accepts integers, it can sometimes be faster than an if statement in C
+
+The program will jump to the location in memory indicated by case 'A' ('A' distance ahead) and relies on break statment to stop. If the distance is too far (i.e. not a defined value) it will go to the default statement.
+
+Always include a `default` and don't forget to include the `break` after each case, unless you really intend for it to "fall through" to the next case
+
