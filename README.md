@@ -170,3 +170,13 @@ The program will jump to the location in memory indicated by case 'A' ('A' dista
 
 Always include a `default` and don't forget to include the `break` after each case, unless you really intend for it to "fall through" to the next case
 
+## Exercise 11: Arrays & Strings
+
+Similarity between arrays and strings
+
+Main difference is with a character array (string) you need to include the null byte terminator `\0` as the last slot
+
+Use `char *name = "Brad"` instead of array syntax for just strings (not a character buffers.)
+
+Many C bugs come from incorrect use of C strings i.e. dropping the null byte
+
