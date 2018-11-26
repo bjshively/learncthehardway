@@ -192,3 +192,16 @@ printf("%ld", sizeof(int)); // prints 4
 Array is one contiguous block of memory in C. sizeof will tell you how big the block is.
 
 When using `char *name`, sizeof will give you the size of the pointer, not of the array.
+
+## Exercise 13: For Loops and Array of Strings
+
+```
+for(INITIALIZER; TEST; INCREMENTER) {
+	CODE;
+}
+```
+
+Make an array of character strings:
+```
+char *states[] = {"Texas", "Pennsylvania", "Ohio"}; 
+```
