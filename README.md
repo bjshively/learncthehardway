@@ -180,3 +180,15 @@ Use `char *name = "Brad"` instead of array syntax for just strings (not a charac
 
 Many C bugs come from incorrect use of C strings i.e. dropping the null byte
 
+## Exercise 12: Sizes and Arrays
+
+`sizeof()` returns the number of bytes necessary to store a given type (or the type of a variable given as an arg, such as an array)
+
+```
+printf("%ld", sizeof(int)); // prints 4
+
+```
+
+Array is one contiguous block of memory in C. sizeof will tell you how big the block is.
+
+When using `char *name`, sizeof will give you the size of the pointer, not of the array.
