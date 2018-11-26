@@ -205,3 +205,31 @@ Make an array of character strings:
 ```
 char *states[] = {"Texas", "Pennsylvania", "Ohio"}; 
 ```
+
+## Exercise 14: Functions
+
+Use forward declarations to specify functions without having to define them yet. Prevents the compiler from complaining about undefined functions (C99 warning) by declaring the signature ahead of time
+
+Forward declarations allow you to define functions out of order (i.e. B calls A, but A is located after B in the src file) or deal with cycles in order in which functions are called
+
+```
+void print_letters(char arg[]);
+
+...
+
+void print_letters(char arg[]) {
+  int i = 0;
+  for (i = 0; arg[i] != '\0'; ++i) {
+    char ch = arg[i];
+
+    if (isalpha(ch) || isblank(ch)) {
+      printf("'%c' == %d ", ch, ch);
+    }
+  }
+
+  printf("\n");
+}
+```
+
+A header file is basically just a collection of forward declarations
+
