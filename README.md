@@ -233,3 +233,54 @@ void print_letters(char arg[]) {
 
 A header file is basically just a collection of forward declarations
 
+## Exercise 15: Pointers
+
+When you access an array element with an index (i.e. `ages[i]`) you can also think of the index as an address: I want the age at address i.
+
+So, what's `ages`? It's also an address in memory. The address of the first age in ages.
+
+"C thinks your whole computer is just one big array of bytes."
+
+- Create a block of memory in your computer (`ages[]`)
+- Point the name `ages` at the beginning of that block
+- Indexing into the block by taking the base address and getting the element `i` away from there
+- Converting the address at `ages+i` into a valid int of the right size so indexing works correctly i.e. the int at index i
+
+Indexing: Take a base address (`ages`) and add another address (`i`) to point to a new address.
+
+Pointer: Something that points right at this location all the time.
+
+A pointer is simply an address pointing somewhere inside memory, with a type specifier so you get the right size of data with it. Its like `ages` and `i` rolled int one thing.
+
+C knows where pointers are pointing and what kind of data types they point to, the size of those types, and how to get the data for you.
+
+Pointer lets you manually index data into blocks or memory when an array won't do it correctly. Often, you just want to use an array. Sometimes, you have to use a pointer. Pointer gives you raw, direct access to a block of memory so you can manipulate it.
+
+### Some practical things you can do with pointers
+
+- Ask the OS for a chunk of memory and work with it (strings, structs)
+- Pass large blocks of memory (i.e. large structs) to functions with a pointer
+- Take the address of a function to use as a dynamic callback
+- Scan complex chunks of memory, converting bytes off of a network socket into data structures or parsing files
+
+For nearly everything else, you should probably be using arrays instead of pointers
+
+Used to make sense to use pointers for performance, but modern compilers use the same machine code and optimize the same way. Use arrays where you can, only optimize with pointers when you have to.
+
+### Pointer lexicon
+
+`type *ptr` A pointer of type named ptr
+
+`*ptr` The value of whatever ptr is pointed at
+
+`*(ptr + i)` The value of (whatever ptr is pointed at plus i)
+
+`&thing` The address of thing
+
+`type *ptr = &thing` A pointer of type named ptr set to the address of thing
+
+`ptr++` increment where ptr points
+
+---
+
+Pointers aren't just arrays. They aren't the same thing, even though C lets you interact with them in many of the same ways. An example of them not working the same is you can't get the size of an entire array by doing `sizeof(ptr)`. That will give you the size of the pointer, not what it points at.
