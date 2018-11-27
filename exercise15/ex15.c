@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
   /* 
     Create a pointer to a pointer to char, because this is a multidimensional
     array
-    char * is just a string. We need char **
+    char * is just a string. We need char **. This is a pointer to a pointer.
   */
   char **cur_name = names;
 

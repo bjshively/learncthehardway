@@ -256,6 +256,8 @@ C knows where pointers are pointing and what kind of data types they point to, t
 
 Pointer lets you manually index data into blocks or memory when an array won't do it correctly. Often, you just want to use an array. Sometimes, you have to use a pointer. Pointer gives you raw, direct access to a block of memory so you can manipulate it.
 
+`char *names[]` is an _array of character pointers_. The names are not in one contiguous block of memory.
+
 ### Some practical things you can do with pointers
 
 - Ask the OS for a chunk of memory and work with it (strings, structs)
@@ -284,3 +286,6 @@ Used to make sense to use pointers for performance, but modern compilers use the
 ---
 
 Pointers aren't just arrays. They aren't the same thing, even though C lets you interact with them in many of the same ways. An example of them not working the same is you can't get the size of an entire array by doing `sizeof(ptr)`. That will give you the size of the pointer, not what it points at.
+
+`*ptr` "dereferences" the pointer: go get the value of what ptr is pointing at.
+
